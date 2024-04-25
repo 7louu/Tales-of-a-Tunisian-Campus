@@ -12,13 +12,30 @@ public class Game{
     }
     private void displayOptions()
     {
-        System.out.println("\nMain Menu:");
+        System.out.println("Main Menu:");
         System.out.println("1. Start Game");
         System.out.println("2. Check Stats");
         System.out.println("3. Save Game");
         System.out.println("4. Load Game");
         System.out.println("5. Exit");
         System.out.print("Enter your choice: ");
+    }
+    private void displayExitOptions(){
+        System.out.println("Are you sure you want to leave?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+    }
+    private void handleExitInput(){
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+        switch (choice){
+            case 1:
+                gameOver = true;
+                System.out.println("See you next time!");
+                break;
+            case 2:
+                break;
+        }
     }
     private void handlePlayerInput()
     {
@@ -45,7 +62,7 @@ public class Game{
     }
     private void displayIntroduction()
     {
-        System.out.println("");
+        System.out.println("Welcome to the Game !\nReady to survive a day in EPI?");
     }
     private void beginLevel()
     {
@@ -58,22 +75,15 @@ public class Game{
     }
     public void exitGame()
     {
-        int choice = scanner.nextInt();
-        System.out.println("");
-        switch (choice){
-            case 1:
-                gameOver = true;
-                break;
-            case 2:
-                break;
-        }
+        displayExitOptions();
+        handleExitInput();
     }
     public void saveGame()
     {
         try {
             FileOutputStream fileOut = new FileOutputStream("gamestate.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
-            out.writeObject(gameState);
+            out.writeObject(player);
             out.close();
             fileOut.close();
             System.out.println("Game saved successfully.");
