@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Player{
     private int money;
     private int health;
@@ -52,11 +54,27 @@ public class Player{
     public void setMoney(int money) {
         this.money = money;
     }
-    public void checkStats()
-    {
-        System.out.println("\nYour current stats are :");
-        getHealth();System.out.println("\n");getFear();System.out.println("\n");getHunger();System.out.println("\n");getLove();System.out.println("\n");getMoney();System.out.println("\n");
-        System.out.println("\n");
+    public void checkStats() {
+        System.out.println("\nYour current stats are:");
+        System.out.println("Health: " + getHealth());
+        System.out.println("Fear: " + getFear());
+        System.out.println("Hunger: " + getHunger());
+        System.out.println("Love: " + getLove());
+        System.out.println("Money: " + getMoney());
+        System.out.println("\nPress any key to return to the main menu...");
+        waitForAnyKey();
     }
+    private void waitForAnyKey()
+    {
+        Game game = new Game();
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+        while(!game.isGameOver()){
+            game.displayOptions();
+            game.handlePlayerInput();
+        }
+
+    }
+
 
 }

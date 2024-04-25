@@ -4,13 +4,18 @@ public class Game{
     private boolean gameOver;
     private Player player;
     private Scanner scanner;
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
     public Game()
     {
         this.gameOver = false;
         this.player = new Player();
         this.scanner = new Scanner(System.in);
     }
-    private void displayOptions()
+    void displayOptions()
     {
         System.out.println("Main Menu:");
         System.out.println("1. Start Game");
@@ -30,14 +35,14 @@ public class Game{
         scanner.nextLine();
         switch (choice){
             case 1:
-                gameOver = true;
                 System.out.println("See you next time!");
+                gameOver = true;
                 break;
             case 2:
                 break;
         }
     }
-    private void handlePlayerInput()
+    void handlePlayerInput()
     {
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -58,7 +63,6 @@ public class Game{
             displayOptions();
             handlePlayerInput();
         }
-        displayEnding();
     }
     private void displayIntroduction()
     {
@@ -68,10 +72,6 @@ public class Game{
     {
         System.out.println("");
         gameOver = true;
-    }
-    private void displayEnding()
-    {
-        System.out.println("");
     }
     public void exitGame()
     {
