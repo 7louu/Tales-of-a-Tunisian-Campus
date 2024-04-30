@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/Player/Player.iml" filepath="$PROJECT_DIR$/Player/Player.iml" />
       <module fileurl="file://$PROJECT_DIR$/Side Character/Side Character.iml" filepath="$PROJECT_DIR$/Side Character/Side Character.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Tales-of-a-Tunisian-Campus.iml" filepath="$PROJECT_DIR$/.idea/Tales-of-a-Tunisian-Campus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dialogueManager/dialogueManager.iml" filepath="$PROJECT_DIR$/dialogueManager/dialogueManager.iml" />
     </modules>
   </component>
 </project>

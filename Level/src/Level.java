@@ -15,7 +15,8 @@ abstract class Level{
     }
     public void startLevel()
     {
-        System.out.println("First Level!");
+        System.out.println("Level Started!");
+        System.out.println("You can exit the game by typing '20' as a choice" );
     }
     public void finishLevel()
     {
@@ -31,7 +32,12 @@ class firstLevel extends Level{
 
     @Override
     public void startLevel() {
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
+        scanner.nextLine();
         super.startLevel();
+        System.out.println("Level 1 : Python Problems");
+        System.out.println("El_7nach : Ayya wini khedmetkom la sbeh lkhir la welou !");
     }
 
     @Override
