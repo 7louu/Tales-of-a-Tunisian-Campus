@@ -6,7 +6,8 @@ class dialogueNode {
     private String text;
     private List<dialogueNode> options;
 
-    public dialogueNode(String text) {
+    public dialogueNode(String text)
+    {
         this.text = text;
         this.options = new ArrayList<>();
     }
@@ -31,7 +32,8 @@ public class dialogueManager {
     private dialogueNode rootNode;
     private dialogueNode currentNode;
 
-    public dialogueManager(dialogueNode rootNode) {
+    public dialogueManager(dialogueNode rootNode)
+    {
         this.rootNode = rootNode;
         this.currentNode = rootNode;
     }
@@ -40,7 +42,8 @@ public class dialogueManager {
         parentNode.addOption(newNode);
     }
 
-    public void startConversation() {
+    public void startConversation()
+    {
         currentNode = rootNode;
         while (currentNode != null) {
             currentNode.displayText();

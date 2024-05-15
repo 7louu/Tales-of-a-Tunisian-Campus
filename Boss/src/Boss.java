@@ -32,7 +32,8 @@ class firstBoss extends Boss {
     }
 }
 class secondBoss extends Boss{
-    public secondBoss(){
+    public secondBoss()
+    {
         super("Nheb nekhou 20",70,100);
     }
     private void increaseAnger()

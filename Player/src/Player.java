@@ -54,7 +54,8 @@ public class Player{
     public void setMoney(int money) {
         this.money = money;
     }
-    public void checkStats() {
+    public void checkStats()
+    {
         System.out.println("\nYour current stats are:");
         System.out.println("Health: " + getHealth());
         System.out.println("Fear: " + getFear());

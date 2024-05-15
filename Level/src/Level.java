@@ -26,13 +26,15 @@ abstract class Level{
 class firstLevel extends Level{
     private firstBoss B1;
 
-    public firstLevel(firstBoss B1){
+    public firstLevel(firstBoss B1)
+    {
         super(1);
         this.B1 = B1;
     }
 
     @Override
-    public void startLevel() {
+    public void startLevel()
+    {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -42,7 +44,8 @@ class firstLevel extends Level{
     }
 
     @Override
-    public void finishLevel() {
+    public void finishLevel()
+    {
         super.finishLevel();
         firstSide side1 = new firstSide(100,100);
         secondLevel l2 = new secondLevel(side1);
@@ -51,7 +54,8 @@ class firstLevel extends Level{
 }
 class secondLevel extends Level{
     private firstSide side1;
-    public secondLevel(firstSide side1){
+    public secondLevel(firstSide side1)
+    {
         super(2);
         this.side1 = side1;
     }
@@ -62,7 +66,8 @@ class secondLevel extends Level{
     }
 
     @Override
-    public void finishLevel() {
+    public void finishLevel()
+    {
         super.finishLevel();
         secondSide side2 = new secondSide();
         thirdLevel l3 = new thirdLevel(side2);
@@ -83,7 +88,8 @@ class thirdLevel extends Level{
     }
 
     @Override
-    public void finishLevel() {
+    public void finishLevel()
+    {
         super.finishLevel();
         thirdSide side3 = new thirdSide();
         fourthLevel l4 = new fourthLevel(side3);
@@ -103,7 +109,8 @@ class fourthLevel extends Level{
     }
 
     @Override
-    public void finishLevel() {
+    public void finishLevel()
+    {
         super.finishLevel();
         secondBoss finalBoss = new secondBoss();
         fifthLevel l5 = new fifthLevel(finalBoss);

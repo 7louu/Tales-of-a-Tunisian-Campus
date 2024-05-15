@@ -8,17 +8,20 @@ abstract class sideCharacter{
 class firstSide extends sideCharacter{
     private int friendship;
     private int sarcasm;
-    public firstSide(int friendship,int sarcasm){
+    public firstSide(int friendship,int sarcasm)
+    {
         super("Jari");
         this.friendship = friendship;
         this.sarcasm = sarcasm;
     }
 
-    public int getFriendship() {
+    public int getFriendship()
+    {
         return friendship;
     }
 
-    public int getSarcasm() {
+    public int getSarcasm()
+    {
         return sarcasm;
     }
 }

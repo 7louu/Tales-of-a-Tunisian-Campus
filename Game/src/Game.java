@@ -5,7 +5,8 @@ public class Game{
     private Player player;
     private Scanner scanner;
 
-    public boolean isGameOver() {
+    public boolean isGameOver()
+    {
         return gameOver;
     }
 
@@ -25,12 +26,14 @@ public class Game{
         System.out.println("5. Exit");
         System.out.print("Enter your choice: ");
     }
-    private void displayExitOptions(){
+    private void displayExitOptions()
+    {
         System.out.println("Are you sure you want to leave?");
         System.out.println("1. Yes");
         System.out.println("2. No");
     }
-    private void handleExitInput(){
+    private void handleExitInput()
+    {
         int choice = scanner.nextInt();
         scanner.nextLine();
         switch (choice){
