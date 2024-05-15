@@ -50,7 +50,7 @@ public class Game{
         int choice = scanner.nextInt();
         scanner.nextLine();
         switch (choice) {
-            case 1 -> startGame();
+            case 1 -> new firstLevel(new firstBoss()).startLevel();
             case 2 -> player.checkStats();
             case 3 -> saveGame();
             case 4 -> loadGame();
@@ -61,7 +61,10 @@ public class Game{
     public void startGame()
     {
         displayIntroduction();
-        while(!gameOver)
+
+
+
+       while(!gameOver)
         {
             displayOptions();
             handlePlayerInput();

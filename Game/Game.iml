@@ -8,5 +8,7 @@
     <orderEntry type="jdk" jdkName="19" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Player" />
+    <orderEntry type="module" module-name="Level" />
+    <orderEntry type="module" module-name="Boss" />
   </component>
 </module>

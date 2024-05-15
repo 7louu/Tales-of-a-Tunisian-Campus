@@ -7,5 +7,8 @@
     </content>
     <orderEntry type="jdk" jdkName="19" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Level" />
+    <orderEntry type="module" module-name="Game" />
+    <orderEntry type="module" module-name="Main" />
   </component>
 </module>
