@@ -10,5 +10,6 @@
     <orderEntry type="module" module-name="Boss" />
     <orderEntry type="module" module-name="Side Character" />
     <orderEntry type="module" module-name="Player" />
+    <orderEntry type="module" module-name="dialogueManager" />
   </component>
 </module>

@@ -25,6 +25,7 @@ abstract class Level{
 }
 class firstLevel extends Level{
     private firstBoss B1;
+
     public firstLevel(firstBoss B1){
         super(1);
         this.B1 = B1;

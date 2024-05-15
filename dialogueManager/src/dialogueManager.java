@@ -1,44 +1,50 @@
 import java.util.ArrayList;
 import java.util.List;
-class dialaogueNode{
+import java.util.Scanner;
+
+class dialogueNode {
     private String text;
-    private List<dialaogueNode> Options;
-    public dialaogueNode(String text){
+    private List<dialogueNode> options;
+
+    public dialogueNode(String text) {
         this.text = text;
-        this.Options = new ArrayList<>();
-    }
-    public void addOption(dialaogueNode option){
-        Options.add(option);
-    }
-    public void displayText(){
-        System.out.println(text);
-    }
-    public void displayOptions()
-    {
-        for (int i=0; i < Options.size(); i++)
-        {
-            System.out.println((i + 1) + " . " + Options.get(i).text);
-        }
-    }
-}
-public class dialogueManager{
-    private dialaogueNode root;
-    public dialogueManager(String rootText)
-    {
-        this.root = new dialaogueNode(rootText);
-    }
-    public void addoptionToRoot(dialaogueNode option)
-    {
-        root.addOption(option);
-    }
-    public void traverseDialogueTree(dialaogueNode node)
-    {
-        node.displayText();
-        node.displayOptions();
-    }
-    public void startConversation()
-    {
-        traverseDialogueTree(root);
+        this.options = new ArrayList<>();
     }
 
+    public void addOption(dialogueNode option) {
+        options.add(option);
+    }
+
+    public void displayText() {
+        System.out.println(text);
+    }
+
+    public void displayOptions() {
+        for (int i = 0; i < options.size(); i++) {
+            System.out.println((i + 1) + ". " + options.get(i).text);
+        }
+
+    }
+}
+
+public class dialogueManager {
+    private dialogueNode rootNode;
+    private dialogueNode currentNode;
+
+    public dialogueManager(dialogueNode rootNode) {
+        this.rootNode = rootNode;
+        this.currentNode = rootNode;
+    }
+
+    public void addNode(dialogueNode parentNode, dialogueNode newNode) {
+        parentNode.addOption(newNode);
+    }
+
+    public void startConversation() {
+        currentNode = rootNode;
+        while (currentNode != null) {
+            currentNode.displayText();
+            currentNode.displayOptions();
+        }
+    }
 }
