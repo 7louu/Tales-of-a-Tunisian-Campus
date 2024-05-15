@@ -43,7 +43,8 @@ class firstLevel extends Level{
     @Override
     public void finishLevel() {
         super.finishLevel();
-        secondLevel l2;
+        firstSide side1 = new firstSide(100,100);
+        secondLevel l2 = new secondLevel(side1);
         l2.startLevel();
     }
 }
@@ -62,7 +63,8 @@ class secondLevel extends Level{
     @Override
     public void finishLevel() {
         super.finishLevel();
-        thirdLevel l3;
+        secondSide side2 = new secondSide();
+        thirdLevel l3 = new thirdLevel(side2);
         l3.startLevel();
     }
 }
@@ -82,7 +84,8 @@ class thirdLevel extends Level{
     @Override
     public void finishLevel() {
         super.finishLevel();
-        fourthLevel l4;
+        thirdSide side3 = new thirdSide();
+        fourthLevel l4 = new fourthLevel(side3);
         l4.startLevel();
     }
 }
@@ -101,7 +104,8 @@ class fourthLevel extends Level{
     @Override
     public void finishLevel() {
         super.finishLevel();
-        fifthLevel l5;
+        secondBoss finalBoss = new secondBoss();
+        fifthLevel l5 = new fifthLevel(finalBoss);
         l5.startLevel();
     }
 }
