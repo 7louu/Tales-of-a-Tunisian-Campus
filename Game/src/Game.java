@@ -104,5 +104,4 @@ public class Game{
             System.out.println("Error loading the game: " + e.getMessage());
         }
     }
-
 }
