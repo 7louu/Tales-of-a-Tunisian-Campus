@@ -12,6 +12,7 @@ abstract class Level{
     public void startLevel()
     {
         System.out.println("Level Started!");
+        System.out.println("Level 1 : Profet el Python");
         System.out.println("You can exit the game by typing '20' as a choice" );
         createFirstDialogue();
     }
@@ -92,6 +93,7 @@ class secondLevel extends Level{
     public void startLevel()
     {
         super.startLevel();
+        System.out.println("Level 2 : Weld classek");
         dialogueManager = createSecondDialogue();
         dialogueManager.startConversation(root);
     }
@@ -155,6 +157,7 @@ class thirdLevel extends Level{
     public void startLevel()
     {
         super.startLevel();
+        System.out.println("Level 3 : SAHABTEK !!!!!");
         dialogueManager = createThirdDialogue();
         dialogueManager.startConversation(root);
     }
@@ -216,6 +219,7 @@ class fourthLevel extends Level{
     public void startLevel()
     {
         super.startLevel();
+        System.out.println("Level 4 : El 3DOU ");
         dialogueManager = createFourthDialogue();
         dialogueManager.startConversation(root);
     }
@@ -281,6 +285,7 @@ class fifthLevel extends Level{
     public void startLevel()
     {
         super.startLevel();
+        System.out.println("Final Level: A7sen Profa fl EPI");
         dialogueManager = createFifthDialogue();
         dialogueManager.startConversation(root);
     }
